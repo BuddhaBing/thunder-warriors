@@ -7,7 +7,6 @@ public class TurretMovement : MonoBehaviour {
 	private Transform target;
 	private float shortestDistance;
 	private GameObject nearestEnemy;
-	private GameObject[] enemies;
 
 	[Header("Attributes")]
 
@@ -20,26 +19,23 @@ public class TurretMovement : MonoBehaviour {
 	public Transform partToRotate;
 	public float turnSpeed = 10f;
 
+	public EnemyManager enemyManager;
+
 	void Start () {
-		InvokeRepeating ("UpdateTarget", 0f, 0.5f);
+		InvokeRepeating ("UpdateTarget", 0f, enemyManager.UpdateRate);
 	}
 
 	void UpdateTarget() {
-		GetEnemies ();
 		shortestDistance = Mathf.Infinity;
 		nearestEnemy = null;
 
-		foreach(GameObject enemy in enemies) {
+		foreach(GameObject enemy in enemyManager.All()) {
 			if (DistanceToEnemy(enemy) < shortestDistance) {
 				shortestDistance = DistanceToEnemy(enemy);
 				nearestEnemy = enemy;
 			}
 		}
 		SelectEnemy ();
-	}
-
-	void GetEnemies() {
-		enemies = GameObject.FindGameObjectsWithTag (enemyTag);
 	}
 
 	float DistanceToEnemy(GameObject enemy) {

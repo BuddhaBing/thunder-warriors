@@ -6,9 +6,9 @@ public class EnemyManager : MonoBehaviour {
 
 	public string EnemyTag = "Enemy";
 
-	private float UpdateRate = 1f;
-
 	private GameObject[] AllEnemies;
+
+	public float UpdateRate = 0.5f;
 
 	public GameObject[] All(){
 		
@@ -16,7 +16,7 @@ public class EnemyManager : MonoBehaviour {
 	}
 
 	void Start	(){
-		InvokeRepeating ("UpdateAllEnemies",0f,UpdateRate);
+		InvokeRepeating ("UpdateAllEnemies",0f, UpdateRate);
 	}
 
 	void UpdateAllEnemies(){

@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44567865, g: 0.49537903, b: 0.57421756, a: 1}
+  m_IndirectSpecularColor: {r: 0.4456793, g: 0.49537992, b: 0.5742182, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -651,11 +651,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4679331945152330, guid: 1b3472a28782dbc499d9b1b726d594b9,
     type: 2}
   m_PrefabInternal: {fileID: 1243395864}
---- !u!4 &455983364 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4014374434404354, guid: f9980b9f84d4f3e499e0553e23f15c1d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1692293290}
 --- !u!1001 &472851619
 Prefab:
   m_ObjectHideFlags: 0
@@ -1529,7 +1524,7 @@ Transform:
   - {fileID: 1309656954}
   - {fileID: 2133113195}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &871114039
 MonoBehaviour:
@@ -1546,6 +1541,7 @@ MonoBehaviour:
   enemyTag: Enemy
   partToRotate: {fileID: 1309656954}
   turnSpeed: 10
+  enemyManager: {fileID: 148040780}
 --- !u!4 &879717206 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4679331945152330, guid: 1b3472a28782dbc499d9b1b726d594b9,
@@ -1681,7 +1677,7 @@ MonoBehaviour:
   useScanlines: 1
   scanlineSize: 80
   scanlineIntensity: 0.188
-  _material: {fileID: 1432055861}
+  _material: {fileID: 1333325931}
 --- !u!82 &909203541
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2764,7 +2760,7 @@ Transform:
   - {fileID: 2101508275}
   - {fileID: 180814470}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1302199966 stripped
 Transform:
@@ -2860,6 +2856,80 @@ Transform:
   m_Father: {fileID: 1450839198}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!21 &1333325931
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/RetroCameraEffect
+  m_Shader: {fileID: 4800000, guid: 2cfdcae76c757405786f1219a383da6e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _SecondaryTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 0ecedd370a77a4a3dbbb9cc9e09081cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _ChromaticAberration
+      second: 0
+    - first:
+        name: _DisplacementAmplitude
+      second: 0.00035
+    - first:
+        name: _DisplacementFrequency
+      second: 19.5
+    - first:
+        name: _DisplacementSpeed
+      second: 0.2
+    - first:
+        name: _NoiseBottomHeight
+      second: 0.04
+    - first:
+        name: _NoiseBottomIntensity
+      second: 1
+    - first:
+        name: _OffsetNoiseX
+      second: 0
+    - first:
+        name: _OffsetNoiseY
+      second: 0
+    - first:
+        name: _OffsetPosY
+      second: 0
+    - first:
+        name: _StaticIntensity
+      second: 1
+    - first:
+        name: _UseChromaticAberration
+      second: 1
+    - first:
+        name: _UseDisplacement
+      second: 1
+    - first:
+        name: _UseStaticNoise
+      second: 1
+    - first:
+        name: _UseVignette
+      second: 0
+    - first:
+        name: _Vignette
+      second: 0
+    m_Colors: []
 --- !u!4 &1349135764
 Transform:
   m_ObjectHideFlags: 0
@@ -3037,80 +3107,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c154ee1f842204822a631526cfb55bf6, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &1432055861
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/RetroCameraEffect
-  m_Shader: {fileID: 4800000, guid: 2cfdcae76c757405786f1219a383da6e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _SecondaryTex
-      second:
-        m_Texture: {fileID: 2800000, guid: 0ecedd370a77a4a3dbbb9cc9e09081cd, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: _ChromaticAberration
-      second: 0
-    - first:
-        name: _DisplacementAmplitude
-      second: 0.00035
-    - first:
-        name: _DisplacementFrequency
-      second: 19.5
-    - first:
-        name: _DisplacementSpeed
-      second: 0.2
-    - first:
-        name: _NoiseBottomHeight
-      second: 0.04
-    - first:
-        name: _NoiseBottomIntensity
-      second: 1
-    - first:
-        name: _OffsetNoiseX
-      second: 0
-    - first:
-        name: _OffsetNoiseY
-      second: 0
-    - first:
-        name: _OffsetPosY
-      second: 0
-    - first:
-        name: _StaticIntensity
-      second: 1
-    - first:
-        name: _UseChromaticAberration
-      second: 1
-    - first:
-        name: _UseDisplacement
-      second: 1
-    - first:
-        name: _UseStaticNoise
-      second: 1
-    - first:
-        name: _UseVignette
-      second: 0
-    - first:
-        name: _Vignette
-      second: 0
-    m_Colors: []
 --- !u!1 &1450839197
 GameObject:
   m_ObjectHideFlags: 0
@@ -3806,11 +3802,11 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2095018200}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4014374434404354, guid: f9980b9f84d4f3e499e0553e23f15c1d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 125.31
+      value: 0.30999756
       objectReference: {fileID: 0}
     - target: {fileID: 4014374434404354, guid: f9980b9f84d4f3e499e0553e23f15c1d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3818,7 +3814,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4014374434404354, guid: f9980b9f84d4f3e499e0553e23f15c1d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 124.198814
+      value: -0.8011856
       objectReference: {fileID: 0}
     - target: {fileID: 4014374434404354, guid: f9980b9f84d4f3e499e0553e23f15c1d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3838,7 +3834,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4014374434404354, guid: f9980b9f84d4f3e499e0553e23f15c1d, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114585448676136194, guid: f9980b9f84d4f3e499e0553e23f15c1d,
+        type: 2}
+      propertyPath: UpdateRate
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9980b9f84d4f3e499e0553e23f15c1d, type: 2}
@@ -3952,7 +3953,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1818104558}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57bdfc094f2b0b34d97da9d7e37d7e44, type: 3}
   m_Name: 
@@ -3977,7 +3978,7 @@ Transform:
   m_Children:
   - {fileID: 788606703}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &1833721388
 Transform:
@@ -4243,7 +4244,7 @@ Transform:
   - {fileID: 890984299}
   - {fileID: 1560261913}
   m_Father: {fileID: 2095018200}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095018197
 GameObject:
@@ -4314,10 +4315,9 @@ Transform:
   m_LocalPosition: {x: -125, y: 0, z: -125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 455983364}
   - {fileID: 2070955078}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2095018201
 MeshRenderer:
