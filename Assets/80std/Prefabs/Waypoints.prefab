@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killZoneSize: 0.9
   checkRate: 0.1
+  MyEnemyManager: {fileID: 0}
 --- !u!114 &114410882245510008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -153,14 +154,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab354c7bc01c4f94096d409f91f3a9ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartWave: 0
   TimeBetweenWaves: 1
-  CountDown: 5
+  Timer: 5
+  MyEnemyManager: {fileID: 0}
   waves:
   - numberToSpawn: 5
     enemyToSpawn: {fileID: 1154997061259702, guid: c5a7dea9191f6f74090436fbadeb67f1,
       type: 2}
     spawnRate: 3
+  waveNumber: 0
 --- !u!114 &114702863228363672
 MonoBehaviour:
   m_ObjectHideFlags: 1
