@@ -3,32 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndPointController : MonoBehaviour {
+public class EndPointMotor : MonoBehaviour {
+    private EndPointLogic EndPointLogic = new EndPointLogic();
 
-	public float killZoneSize = 0.9f;
-	public float checkRate = 0.1f;
+    void OnTriggerEnter(Collider collider){
+        EndPointLogic.EnemyLeaked (collider.gameObject);
+    }
+}
 
-	public EnemyManager MyEnemyManager;
+public class EndPointLogic{
+    public EnemyManager MyEnemyManager;
 
-	void Start(){
-		InvokeRepeating ("CheckIfInRange",0f,checkRate);
-	}
-
-	void KillZoneEntered(GameObject enemy){
-		Destroy (enemy);
-	}
-
-	void CheckIfInRange(){
-		GameObject[] enemies = MyEnemyManager.All ();
-		if (enemies == null){return;}
-		foreach (GameObject enemy in enemies) {
-			if(enemy == null){continue;}
-			float distanceToEnemy = Vector3.Distance (transform.position, enemy.transform.position);
-			if (distanceToEnemy < killZoneSize) {
-				KillZoneEntered (enemy);
-			}
-		}
-		
-	}
-
+    public void EnemyLeaked(GameObject Enemy){
+        //if(Array.IndexOf (MyEnemyManager.All (), Enemy) == -1){return;}
+        //call player to remove n lives
+        GameObject.DestroyImmediate (Enemy);
+    }
 }
