@@ -22,8 +22,8 @@ public class EndPointLogic{
 	public EndPointMotor MyMotor;
 
 	public void EnemyLeaked(GameObject Enemy){
-		//if(Array.IndexOf (MyEnemyManager.All (), Enemy) == -1){return;}
-		//call player to remove n lives
+		if (Enemy.tag != "Enemy") {return;}
 		GameObject.Destroy(Enemy);
+		//Hurt player
 	}
 }

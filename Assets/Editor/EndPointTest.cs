@@ -23,7 +23,7 @@ public class EndPointTest {
 	}
 
 	public EndPointMotor GetMotorMock(){
-		EndPointMotor EPM = Substitute.For<EndPointMotor>();
+		EndPointMotor EPM = NSubstitute.Substitute.For<EndPointMotor>();
 		return EPM;
 	}
 }
