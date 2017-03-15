@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33805435980295418}
   - component: {fileID: 23679028715684742}
   - component: {fileID: 114535861479261742}
+  - component: {fileID: 65844478040730950}
+  - component: {fileID: 54181969727869664}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -80,6 +82,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1154997061259702}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54181969727869664
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1154997061259702}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65844478040730950
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1154997061259702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1.0000001}
+  m_Center: {x: 0.00000005960464, y: 0, z: -0.00000008940696}
 --- !u!114 &114535861479261742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,5 +120,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57f27f02cf04114a898adb8c03242d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4
+  Speed: 20
   RotationSpeed: 10
