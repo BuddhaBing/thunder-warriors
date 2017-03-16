@@ -13,6 +13,7 @@ public class Turret : MonoBehaviour {
 	public float range = 3f;
 	public float turnSpeed = 10f;
 	public float fireRate = 2f;
+	public float updateRate = 0.5f;
 	private float fireCountdown = 0f;
 
 	[Header("Unity Setup Fields")]
@@ -24,7 +25,7 @@ public class Turret : MonoBehaviour {
 	public GameObject bulletPrefab;
 
 	void Start () {
-		InvokeRepeating ("UpdateTarget", 0f, enemyManager.UpdateRate);
+		InvokeRepeating ("UpdateTarget", 0f, updateRate);
 	}
 
 	void UpdateTarget() {
@@ -32,6 +33,8 @@ public class Turret : MonoBehaviour {
 		nearestEnemy = null;
 
 		foreach(GameObject enemy in enemyManager.All()) {
+			if (!enemy)
+				continue;
 			if (DistanceToEnemy(enemy) < shortestDistance) {
 				shortestDistance = DistanceToEnemy(enemy);
 				nearestEnemy = enemy;

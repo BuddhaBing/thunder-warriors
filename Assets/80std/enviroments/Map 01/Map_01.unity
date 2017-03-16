@@ -1193,6 +1193,80 @@ Transform:
   m_PrefabParentObject: {fileID: 4679331945152330, guid: 1b3472a28782dbc499d9b1b726d594b9,
     type: 2}
   m_PrefabInternal: {fileID: 549754381}
+--- !u!21 &639949463
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/RetroCameraEffect
+  m_Shader: {fileID: 4800000, guid: 2cfdcae76c757405786f1219a383da6e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _SecondaryTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 0ecedd370a77a4a3dbbb9cc9e09081cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _ChromaticAberration
+      second: 0
+    - first:
+        name: _DisplacementAmplitude
+      second: 0.00035
+    - first:
+        name: _DisplacementFrequency
+      second: 19.5
+    - first:
+        name: _DisplacementSpeed
+      second: 0.2
+    - first:
+        name: _NoiseBottomHeight
+      second: 0.04
+    - first:
+        name: _NoiseBottomIntensity
+      second: 1
+    - first:
+        name: _OffsetNoiseX
+      second: 0
+    - first:
+        name: _OffsetNoiseY
+      second: 0
+    - first:
+        name: _OffsetPosY
+      second: 0
+    - first:
+        name: _StaticIntensity
+      second: 1
+    - first:
+        name: _UseChromaticAberration
+      second: 1
+    - first:
+        name: _UseDisplacement
+      second: 1
+    - first:
+        name: _UseStaticNoise
+      second: 1
+    - first:
+        name: _UseVignette
+      second: 0
+    - first:
+        name: _Vignette
+      second: 0
+    m_Colors: []
 --- !u!1001 &649268782
 Prefab:
   m_ObjectHideFlags: 0
@@ -1547,6 +1621,7 @@ MonoBehaviour:
   range: 3
   turnSpeed: 10
   fireRate: 2
+  updateRate: 0.5
   enemyTag: Enemy
   partToRotate: {fileID: 1309656954}
   firePoint: {fileID: 840100467}
@@ -1723,7 +1798,7 @@ MonoBehaviour:
   useScanlines: 1
   scanlineSize: 80
   scanlineIntensity: 0.188
-  _material: {fileID: 1703279101}
+  _material: {fileID: 639949463}
 --- !u!82 &909203541
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3816,80 +3891,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9980b9f84d4f3e499e0553e23f15c1d, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &1703279101
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/RetroCameraEffect
-  m_Shader: {fileID: 4800000, guid: 2cfdcae76c757405786f1219a383da6e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _SecondaryTex
-      second:
-        m_Texture: {fileID: 2800000, guid: 0ecedd370a77a4a3dbbb9cc9e09081cd, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: _ChromaticAberration
-      second: 0
-    - first:
-        name: _DisplacementAmplitude
-      second: 0.00035
-    - first:
-        name: _DisplacementFrequency
-      second: 19.5
-    - first:
-        name: _DisplacementSpeed
-      second: 0.2
-    - first:
-        name: _NoiseBottomHeight
-      second: 0.04
-    - first:
-        name: _NoiseBottomIntensity
-      second: 1
-    - first:
-        name: _OffsetNoiseX
-      second: 0
-    - first:
-        name: _OffsetNoiseY
-      second: 0
-    - first:
-        name: _OffsetPosY
-      second: 0
-    - first:
-        name: _StaticIntensity
-      second: 1
-    - first:
-        name: _UseChromaticAberration
-      second: 1
-    - first:
-        name: _UseDisplacement
-      second: 1
-    - first:
-        name: _UseStaticNoise
-      second: 1
-    - first:
-        name: _UseVignette
-      second: 0
-    - first:
-        name: _Vignette
-      second: 0
-    m_Colors: []
 --- !u!4 &1725811920 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4679331945152330, guid: 1b3472a28782dbc499d9b1b726d594b9,
@@ -4007,6 +4008,7 @@ MonoBehaviour:
   range: 3
   turnSpeed: 10
   fireRate: 2
+  updateRate: 0.5
   enemyTag: Enemy
   partToRotate: {fileID: 1350676759}
   firePoint: {fileID: 1458761764}
