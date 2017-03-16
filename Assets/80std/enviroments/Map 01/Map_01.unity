@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4456793, g: 0.49537992, b: 0.5742182, a: 1}
+  m_IndirectSpecularColor: {r: 0.44567865, g: 0.49537903, b: 0.57421756, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -495,11 +495,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4483582177369830, guid: 2b365efb757da4721bbba0b9244c2b13, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.50000006
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4483582177369830, guid: 2b365efb757da4721bbba0b9244c2b13, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.50000006
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4483582177369830, guid: 2b365efb757da4721bbba0b9244c2b13, type: 2}
       propertyPath: m_LocalRotation.z
@@ -527,7 +527,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4483582177369830, guid: 2b365efb757da4721bbba0b9244c2b13, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90.00001
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4483582177369830, guid: 2b365efb757da4721bbba0b9244c2b13, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -536,6 +536,80 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b365efb757da4721bbba0b9244c2b13, type: 2}
   m_IsPrefabParent: 0
+--- !u!21 &237382471
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/RetroCameraEffect
+  m_Shader: {fileID: 4800000, guid: 2cfdcae76c757405786f1219a383da6e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _SecondaryTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 0ecedd370a77a4a3dbbb9cc9e09081cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _ChromaticAberration
+      second: 0
+    - first:
+        name: _DisplacementAmplitude
+      second: 0.00035
+    - first:
+        name: _DisplacementFrequency
+      second: 19.5
+    - first:
+        name: _DisplacementSpeed
+      second: 0.2
+    - first:
+        name: _NoiseBottomHeight
+      second: 0.04
+    - first:
+        name: _NoiseBottomIntensity
+      second: 1
+    - first:
+        name: _OffsetNoiseX
+      second: 0
+    - first:
+        name: _OffsetNoiseY
+      second: 0
+    - first:
+        name: _OffsetPosY
+      second: 0
+    - first:
+        name: _StaticIntensity
+      second: 1
+    - first:
+        name: _UseChromaticAberration
+      second: 1
+    - first:
+        name: _UseDisplacement
+      second: 1
+    - first:
+        name: _UseStaticNoise
+      second: 1
+    - first:
+        name: _UseVignette
+      second: 0
+    - first:
+        name: _Vignette
+      second: 0
+    m_Colors: []
 --- !u!4 &249724312 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4679331945152330, guid: 1b3472a28782dbc499d9b1b726d594b9,
@@ -1031,6 +1105,69 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b3472a28782dbc499d9b1b726d594b9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &574206826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 574206828}
+  - component: {fileID: 574206827}
+  m_Layer: 0
+  m_Name: Directional Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &574206827
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 574206826}
+  m_Enabled: 1
+  serializedVersion: 7
+  m_Type: 1
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 0.25
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &574206828
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 574206826}
+  m_LocalRotation: {x: -0.7251635, y: 0.15200287, z: -0.52606785, w: -0.41747543}
+  m_LocalPosition: {x: -4.64, y: 5.15, z: 3.67}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 49.943, y: 98.753006, z: -199.875}
 --- !u!4 &582359491
 Transform:
   m_ObjectHideFlags: 0
@@ -1462,8 +1599,6 @@ GameObject:
   m_Component:
   - component: {fileID: 871114038}
   - component: {fileID: 871114037}
-  - component: {fileID: 871114036}
-  - component: {fileID: 871114039}
   m_Layer: 0
   m_Name: turret_1
   m_TagString: Untagged
@@ -1471,26 +1606,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &871114036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114301412465256550, guid: a7581e00212af4d48ae78bfeb203a6b3,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 871114035}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57bdfc094f2b0b34d97da9d7e37d7e44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 15
-  fireRate: 1
-  enemyTag: Enemy
-  partToRotate: {fileID: 1309656954}
-  turnSpeed: 10
-  bulletPrefab: {fileID: 1894891172788258, guid: db369762f8a7a214bbe9f817fc27f462,
-    type: 2}
-  firePoint: {fileID: 840100467}
 --- !u!95 &871114037
 Animator:
   serializedVersion: 3
@@ -1524,24 +1639,8 @@ Transform:
   - {fileID: 1309656954}
   - {fileID: 2133113195}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &871114039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 871114035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bc707cf2e3304f6192eb5b2985eb8dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 15
-  enemyTag: Enemy
-  partToRotate: {fileID: 1309656954}
-  turnSpeed: 10
-  enemyManager: {fileID: 148040780}
 --- !u!4 &879717206 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4679331945152330, guid: 1b3472a28782dbc499d9b1b726d594b9,
@@ -1677,7 +1776,7 @@ MonoBehaviour:
   useScanlines: 1
   scanlineSize: 80
   scanlineIntensity: 0.188
-  _material: {fileID: 1333325931}
+  _material: {fileID: 237382471}
 --- !u!82 &909203541
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2760,7 +2859,7 @@ Transform:
   - {fileID: 2101508275}
   - {fileID: 180814470}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1302199966 stripped
 Transform:
@@ -2856,80 +2955,6 @@ Transform:
   m_Father: {fileID: 1450839198}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!21 &1333325931
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/RetroCameraEffect
-  m_Shader: {fileID: 4800000, guid: 2cfdcae76c757405786f1219a383da6e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _SecondaryTex
-      second:
-        m_Texture: {fileID: 2800000, guid: 0ecedd370a77a4a3dbbb9cc9e09081cd, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: _ChromaticAberration
-      second: 0
-    - first:
-        name: _DisplacementAmplitude
-      second: 0.00035
-    - first:
-        name: _DisplacementFrequency
-      second: 19.5
-    - first:
-        name: _DisplacementSpeed
-      second: 0.2
-    - first:
-        name: _NoiseBottomHeight
-      second: 0.04
-    - first:
-        name: _NoiseBottomIntensity
-      second: 1
-    - first:
-        name: _OffsetNoiseX
-      second: 0
-    - first:
-        name: _OffsetNoiseY
-      second: 0
-    - first:
-        name: _OffsetPosY
-      second: 0
-    - first:
-        name: _StaticIntensity
-      second: 1
-    - first:
-        name: _UseChromaticAberration
-      second: 1
-    - first:
-        name: _UseDisplacement
-      second: 1
-    - first:
-        name: _UseStaticNoise
-      second: 1
-    - first:
-        name: _UseVignette
-      second: 0
-    - first:
-        name: _Vignette
-      second: 0
-    m_Colors: []
 --- !u!4 &1349135764
 Transform:
   m_ObjectHideFlags: 0
@@ -3146,7 +3171,7 @@ Transform:
   - {fileID: 1349135764}
   - {fileID: 120875447}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1450839199
 MonoBehaviour:
@@ -3834,7 +3859,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4014374434404354, guid: f9980b9f84d4f3e499e0553e23f15c1d, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114585448676136194, guid: f9980b9f84d4f3e499e0553e23f15c1d,
         type: 2}
@@ -3882,8 +3907,8 @@ Transform:
   m_PrefabParentObject: {fileID: 484818, guid: 8a4fca54c9faa3449bcff12193992420, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1812223121}
-  m_LocalRotation: {x: -0.50000006, y: -0.50000006, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -0.0031003957, y: 7.0232887, z: -0}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: -0.0031003952, y: 7.0232997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1458761764}
@@ -3939,7 +3964,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1818104560}
-  - component: {fileID: 1818104559}
   m_Layer: 0
   m_Name: Turret 1a
   m_TagString: Untagged
@@ -3947,25 +3971,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1818104559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1818104558}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57bdfc094f2b0b34d97da9d7e37d7e44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 15
-  fireRate: 1
-  enemyTag: Enemy
-  partToRotate: {fileID: 1350676759}
-  turnSpeed: 10
-  bulletPrefab: {fileID: 1894891172788258, guid: db369762f8a7a214bbe9f817fc27f462,
-    type: 2}
-  firePoint: {fileID: 1458761764}
 --- !u!4 &1818104560
 Transform:
   m_ObjectHideFlags: 0
@@ -3978,7 +3983,7 @@ Transform:
   m_Children:
   - {fileID: 788606703}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &1833721388
 Transform:
@@ -4317,7 +4322,7 @@ Transform:
   m_Children:
   - {fileID: 2070955078}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2095018201
 MeshRenderer:

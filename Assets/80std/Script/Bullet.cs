@@ -10,8 +10,7 @@ public class Bullet : MonoBehaviour {
 	public void Seek (Transform _target) {
 		target = _target;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if(target == null) {
 			Destroy (gameObject);

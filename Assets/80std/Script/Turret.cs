@@ -5,58 +5,58 @@ using UnityEngine;
 public class Turret : MonoBehaviour {
 
 	private Transform target;
+	private float shortestDistance;
+	private GameObject nearestEnemy;
 
 	[Header("Attributes")]
 
-	public float range = 15f;
-	public float fireRate = 1f;
+	public float range = 3f;
+	public float turnSpeed = 10f;
+	public float fireRate = 2f;
 	private float fireCountdown = 0f;
 
 	[Header("Unity Setup Fields")]
 
 	public string enemyTag = "Enemy";
-
 	public Transform partToRotate;
-	public float turnSpeed = 10f;
-
-	public GameObject bulletPrefab;
 	public Transform firePoint;
+	public EnemyManager enemyManager;
+	public GameObject bulletPrefab;
 
-
-	// Use this for initialization
 	void Start () {
-		InvokeRepeating ("UpdateTarget", 0f, 0.5f);
+		InvokeRepeating ("UpdateTarget", 0f, enemyManager.UpdateRate);
 	}
 
 	void UpdateTarget() {
-		GameObject[] enemies = GameObject.FindGameObjectsWithTag (enemyTag);
-		float shortestDistance = Mathf.Infinity;
-		GameObject nearestEnemy = null;
+		shortestDistance = Mathf.Infinity;
+		nearestEnemy = null;
 
-		foreach(GameObject enemy in enemies) {
-			float distanceToEnemy = Vector3.Distance (transform.position, enemy.transform.position);
-			if (distanceToEnemy < shortestDistance) {
-				shortestDistance = distanceToEnemy;
+		foreach(GameObject enemy in enemyManager.All()) {
+			if (DistanceToEnemy(enemy) < shortestDistance) {
+				shortestDistance = DistanceToEnemy(enemy);
 				nearestEnemy = enemy;
 			}
 		}
-		SelectEnemy (shortestDistance, nearestEnemy);
+		SelectEnemy ();
 	}
 
-	void SelectEnemy(float shortestDistance, GameObject nearestEnemy) {
-		if (nearestEnemy != null && shortestDistance <= range) {
+	float DistanceToEnemy(GameObject enemy) {
+		return Vector3.Distance (transform.position, enemy.transform.position);
+	}
+
+	void SelectEnemy() {
+		if (nearestEnemy && shortestDistance <= range) {
 			target = nearestEnemy.transform;
 		} else {
 			target = null;
 		}
 	}
-
-	// Update is called once per frame
+	
 	void Update () {
-		if (target == null)
+		if (!target)
 			return;
 		LockOn();
-		Shoot();
+		Shoot ();
 	}
 
 	void LockOn() {
@@ -87,4 +87,5 @@ public class Turret : MonoBehaviour {
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere (transform.position, range);
 	}
+
 }
