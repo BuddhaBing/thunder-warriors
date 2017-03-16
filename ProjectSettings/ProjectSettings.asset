@@ -463,7 +463,7 @@ PlayerSettings:
   vrEditorSettings: {}
   cloudServicesEnabled:
     Build: 0
-    Collab: 1
+    Collab: 0
     UNet: 1
   cloudProjectId: 9ba9e1b2-3b5b-4b4d-84dd-aec8661d5326
   projectName: 80sTD
