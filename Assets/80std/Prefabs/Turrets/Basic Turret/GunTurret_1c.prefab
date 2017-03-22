@@ -110,8 +110,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 469414}
+  - component: {fileID: 114486865459329170}
+  - component: {fileID: 114285295870114832}
+  - component: {fileID: 114716334662219668}
+  - component: {fileID: 114251776687752790}
   - component: {fileID: 114272223213629594}
-  - component: {fileID: 114064658956130996}
   m_Layer: 0
   m_Name: GunTurret_1c
   m_TagString: Untagged
@@ -738,7 +741,7 @@ Transform:
   m_Father: {fileID: 4878620084290880}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114064658956130996
+--- !u!114 &114251776687752790
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -746,13 +749,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 181270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60e291deb2492914189234ea0bcb4b4c, type: 3}
+  m_Script: {fileID: 11500000, guid: b081c6872dca74561ad9c991b27c32e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  costToBuy: 600
-  sellPrice: 200
-  upgradePrefab: {fileID: 157514, guid: b27d2029a45ab43579f57944a6443dc9, type: 2}
-  costToUpgrade: 500
 --- !u!114 &114272223213629594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -764,17 +763,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57bdfc094f2b0b34d97da9d7e37d7e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: {fileID: 0}
-  range: 5
-  turnSpeed: 10
-  fireRate: 2
-  updateRate: 0.5
+--- !u!114 &114285295870114832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9843b4fb390453b8bd7c412aff1bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114486865459329170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3015c78f533d459abf20e93de80b282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   enemyTag: Enemy
+  range: 3
+  turnSpeed: 10
+  fireRate: 1
+  updateRate: 0.5
+  costToBuy: 400
+  costToUpgrade: 200
+  upgradePrefab: {fileID: 157514, guid: b27d2029a45ab43579f57944a6443dc9, type: 2}
+  sellPrice: 150
+  bulletPrefab: {fileID: 1894891172788258, guid: db369762f8a7a214bbe9f817fc27f462,
+    type: 2}
   partToRotate: {fileID: 4356053977651952}
   firepoints:
   - {fileID: 4674104017618198}
   - {fileID: 4958319241085156}
   - {fileID: 4824546591163164}
-  enemyManager: {fileID: 0}
-  bulletPrefab: {fileID: 1894891172788258, guid: db369762f8a7a214bbe9f817fc27f462,
-    type: 2}
+  enemies: {fileID: 0}
+  owner: {fileID: 0}
+  model: {fileID: 0}
+  targeting: {fileID: 0}
+  view: {fileID: 0}
+--- !u!114 &114716334662219668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf317955a7aa4576afd67c73e543f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

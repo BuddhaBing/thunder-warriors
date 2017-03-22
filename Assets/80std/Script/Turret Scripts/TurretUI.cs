@@ -5,7 +5,7 @@ using UnityEngine;
 public class TurretUI : MonoBehaviour {
 
 	private TurretNode currentTarget;
-	ConstructionManager constructionManager;
+	public BuildingManager buildingManager;
 
 	public void SetTarget(TurretNode target) {
 		currentTarget = target;
@@ -21,11 +21,11 @@ public class TurretUI : MonoBehaviour {
 	}
 
 	public void Upgrade() {
-		currentTarget.UpgradeTurret ();
+		buildingManager.StartUpgrade ();
 	}
 
-	public void Sell() {
-		currentTarget.SellTurret ();
+	public void Sell() { 
+		buildingManager.SellTurret ();
 	}
 
 }

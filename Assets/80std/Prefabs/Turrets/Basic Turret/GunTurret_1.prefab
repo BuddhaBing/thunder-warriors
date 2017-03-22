@@ -119,8 +119,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4255602658102584}
-  - component: {fileID: 114743023573152302}
-  - component: {fileID: 114426438302722142}
+  - component: {fileID: 114489659923969302}
+  - component: {fileID: 114533148505824902}
+  - component: {fileID: 114380396759343440}
+  - component: {fileID: 114548169636450452}
+  - component: {fileID: 114923063170071360}
   m_Layer: 0
   m_Name: GunTurret_1
   m_TagString: Untagged
@@ -513,7 +516,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1226639688871292}
   m_Mesh: {fileID: 4300002, guid: ddad9d6c961e60d4882d856b30ad4304, type: 3}
---- !u!114 &114426438302722142
+--- !u!114 &114380396759343440
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -521,14 +524,62 @@ MonoBehaviour:
   m_GameObject: {fileID: 1558910609972998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60e291deb2492914189234ea0bcb4b4c, type: 3}
+  m_Script: {fileID: 11500000, guid: ecf317955a7aa4576afd67c73e543f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114489659923969302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1558910609972998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3015c78f533d459abf20e93de80b282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTag: Enemy
+  range: 3
+  turnSpeed: 10
+  fireRate: 2
+  updateRate: 0.5
   costToBuy: 400
-  sellPrice: 100
+  costToUpgrade: 200
   upgradePrefab: {fileID: 105128, guid: f9c620689c4a04b5587c6cbbe7662db8, type: 2}
-  costToUpgrade: 300
---- !u!114 &114743023573152302
+  sellPrice: 100
+  bulletPrefab: {fileID: 1894891172788258, guid: db369762f8a7a214bbe9f817fc27f462,
+    type: 2}
+  partToRotate: {fileID: 4087322937323486}
+  firepoints:
+  - {fileID: 4150617083794204}
+  enemies: {fileID: 0}
+  owner: {fileID: 0}
+  model: {fileID: 0}
+  targeting: {fileID: 0}
+  view: {fileID: 0}
+--- !u!114 &114533148505824902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1558910609972998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9843b4fb390453b8bd7c412aff1bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114548169636450452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1558910609972998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b081c6872dca74561ad9c991b27c32e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114923063170071360
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -539,15 +590,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57bdfc094f2b0b34d97da9d7e37d7e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: {fileID: 0}
-  range: 3
-  turnSpeed: 10
-  fireRate: 2
-  updateRate: 0.5
-  enemyTag: Enemy
-  partToRotate: {fileID: 4087322937323486}
-  firepoints:
-  - {fileID: 4150617083794204}
-  enemyManager: {fileID: 0}
-  bulletPrefab: {fileID: 1894891172788258, guid: db369762f8a7a214bbe9f817fc27f462,
-    type: 2}

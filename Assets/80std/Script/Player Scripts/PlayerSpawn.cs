@@ -10,32 +10,26 @@ public class PlayerSpawn : MonoBehaviour {
 	private int waveNumber = 0;
 	private Coroutine waveSpawner = null;
 	private Wave[] waves;
-	private Transform spawnPoint;
-	private EnemyManager enemyManager;
-	private WaypointManager wayPoints;
+	private GameObject genericEnemy;
+	public Transform spawnPoint;
+	public EnemyManager enemyManager;
+	public WaypointManager wayPoints;
 	private PlayerConfig owningPlayer;
 
 	void Start() 
 	{
 		var spawnInfo = SpawnInfo.get;
-		owningPlayer = GetComponentInParent<PlayerConfig> ();
+		owningPlayer = GetComponent<PlayerConfig> ();
 
 		waves = spawnInfo.waves;
 		timer = spawnInfo.initialTimer;
 		timeBetweenWaves = spawnInfo.timeBetweenWaves;
-
-		spawnPoint   = owningPlayer.spawnPoint;		
-		enemyManager = owningPlayer.enemyManager;
-		wayPoints    = owningPlayer.waypoints;
+		genericEnemy = spawnInfo.genericEnemy;
 	}
 
 	void Stop(){
 		StopWave ();
 		stopped = true;
-	}
-
-	void Update(){
-		MyUpdate (Time.deltaTime);
 	}
 		
 	public void MyUpdate(float deltaTime){
@@ -63,11 +57,14 @@ public class PlayerSpawn : MonoBehaviour {
 		}
 	}
 
-	public void MakeEnemy(GameObject enemy){
-		GameObject NewEnemy = Instantiate (enemy, spawnPoint.transform.position, spawnPoint.transform.rotation);
+	public void MakeEnemy(EnemyConfig enemy){
+		GameObject NewEnemy = Instantiate (genericEnemy, spawnPoint.transform.position, spawnPoint.transform.rotation);
+		var enemyConfig = NewEnemy.GetComponent<EnemyPrefabConfig> ();
 		NewEnemy.transform.SetParent (enemyManager.transform);
-		NewEnemy.GetComponent<EnemyHealth> ().OwningPlayer = owningPlayer;
-		NewEnemy.GetComponent<EnemyMovementController> ().waypointManager = wayPoints;
+		enemyConfig.enemyScriptableObject = enemy;
+		enemyConfig.owningPlayer = owningPlayer;
+		enemyConfig.waypointManager = wayPoints;
+		enemyConfig.Initialize ();
 	}
 
 	void ResetTimer(){

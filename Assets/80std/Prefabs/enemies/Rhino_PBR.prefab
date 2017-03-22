@@ -1264,7 +1264,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1692202844528334}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.0066120927, y: -0.6972882, z: 0.006432721, w: 0.71673155}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1897,9 +1897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ebf7135ebfa461aad6c5864a7af82a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getHitClip: {fileID: 8300000, guid: 73cbf4066d38f4117bba8ca3ba87b009, type: 3}
-  dieClip: {fileID: 8300000, guid: 497819060bce2404ba49cbbdf6497db7, type: 3}
-  breachClip: {fileID: 0}
 --- !u!114 &114366609571568532
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -4,11 +4,14 @@ using UnityEngine;
 
 
 public class PlayerConfig: MonoBehaviour {
-	public Transform spawnPoint;
 	public EnemyManager enemyManager;
 	public PlayerMoney money;
 	public PlayerHealth health;
-	public WaypointManager waypoints;
 	public PlayerScore score;
 	public PlayerUI UI;
+	public PlayerSpawn spawn;
+	public PlayerInterface playerInterface;
+	public PlayerState state;
+	public BuildingManager buildingManager;
+	public CameraController cameraController;
 }

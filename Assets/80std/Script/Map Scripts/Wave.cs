@@ -4,7 +4,7 @@
 public class Wave{
 	
 	public int numberToSpawn;
-	public GameObject enemyToSpawn;
+	public EnemyConfig enemyToSpawn;
 	public float spawnRate;
 
 }

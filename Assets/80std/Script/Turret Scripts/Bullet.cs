@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour {
 	void HitTarget () {
 		GameObject effectIns = Instantiate (impactEffect, transform.position, transform.rotation);
 		Destroy (effectIns, 2f); //destroys effect
-		target.GetComponent<EnemyHealth> ().TakeDamage (damage); //deals damage
+		target.GetComponent<EnemyController> ().Damage (damage); //deals damage
 		Destroy (gameObject); //destroys bullet
 	}
 }

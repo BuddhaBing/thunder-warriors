@@ -8,6 +8,7 @@ public class SpawnInfo : MonoBehaviour {
 	public float initialTimer = 5f;
 	public int waveNumber = 0;
 	public Wave[] waves;
+	public GameObject genericEnemy;
 	static public SpawnInfo get;
 	void Awake(){
 		get = this;

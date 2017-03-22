@@ -7,7 +7,6 @@ public class EnemyManager : MonoBehaviour {
 	private GameObject[] AllEnemies;
 
 	public float UpdateRate = 0.5f;
-
 	public GameObject[] All(){
 		
 		return AllEnemies;
@@ -24,5 +23,8 @@ public class EnemyManager : MonoBehaviour {
 		}
 	}
 
+	public bool IsEmpty(){
+		return AllEnemies.Length == 0;
+	}
 }
 	

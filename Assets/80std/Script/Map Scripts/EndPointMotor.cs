@@ -23,6 +23,6 @@ public class EndPointMotor : MonoBehaviour {
 	}
 
 	void DamagePlayer(GameObject player) {
-		player.GetComponent<PlayerHealth> ().TakeDamage ();
+		player.GetComponent<PlayerState> ().TakeDamage ();
 	}
 }

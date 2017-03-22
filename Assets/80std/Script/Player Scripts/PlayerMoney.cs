@@ -16,4 +16,18 @@ public class PlayerMoney : MonoBehaviour {
 	public void TakeMoney(int lessMoney){
 		money -= lessMoney;
 	}
+
+	public bool CanAfford(int cost) {
+		return money >= cost;
+	}
+
+	public bool CanAffordTurret(GameObject turret) {
+		var cost = turret.GetComponent<TurretConfig>().costToBuy;
+		return money >= cost;
+	}
+
+	public void TakeMoneyTurret(GameObject turret) {
+		var cost = turret.GetComponent<TurretConfig>().costToBuy;
+		money -= cost;
+	}
 }

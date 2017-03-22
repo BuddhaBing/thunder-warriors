@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour {
 
-	ConstructionManager constructionManager;
+	public BuildingManager visitor;
+	private ShopInventory inventory;
+	private GameObject[] turrets;
+	private GameObject selectedItem;
 
 	void Start () 
 	{
-		constructionManager = ConstructionManager.instance;
+		inventory = GetComponent<ShopInventory>();
+		turrets = inventory.turretPrefabs;
 	}
-	
-	public void PurchaseGunTurret_1 ()
+
+	public void Select (int index)
 	{
-		constructionManager.SetTurretToBuild (constructionManager.gunTurret_1); 
+		visitor.SetTurretToBuild(turrets[index]);
+	}
+
+	public void Upgrade() {
+		visitor.StartUpgrade ();
 	}
 }

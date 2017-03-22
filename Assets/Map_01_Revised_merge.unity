@@ -508,6 +508,81 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b3472a28782dbc499d9b1b726d594b9, type: 2}
   m_IsPrefabParent: 0
+--- !u!21 &103644429
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hidden/RetroCameraEffect
+  m_Shader: {fileID: 4800000, guid: 2cfdcae76c757405786f1219a383da6e, type: 3}
+  m_ShaderKeywords: BOTTOM_STRETCH_ON CHROMATIC_ON DISPLACEMENT_ON NOISE_BOTTOM_ON
+    NOISE_ON RADIAL_DISTORTION_ON SCANLINES_ON VIGNETTE_ON
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _SecondaryTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 0ecedd370a77a4a3dbbb9cc9e09081cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _ChromaticAberration
+      second: 1.6
+    - first:
+        name: _DisplacementAmplitude
+      second: 0.00035
+    - first:
+        name: _DisplacementFrequency
+      second: 19.5
+    - first:
+        name: _DisplacementSpeed
+      second: 0.2
+    - first:
+        name: _NoiseBottomHeight
+      second: 0.038
+    - first:
+        name: _NoiseBottomIntensity
+      second: 1.067
+    - first:
+        name: _OffsetNoiseX
+      second: 0.44674164
+    - first:
+        name: _OffsetNoiseY
+      second: -0.04474737
+    - first:
+        name: _OffsetPosY
+      second: 0
+    - first:
+        name: _StaticIntensity
+      second: 0.956
+    - first:
+        name: _UseChromaticAberration
+      second: 1
+    - first:
+        name: _UseDisplacement
+      second: 1
+    - first:
+        name: _UseStaticNoise
+      second: 1
+    - first:
+        name: _UseVignette
+      second: 0
+    - first:
+        name: _Vignette
+      second: 0.1
+    m_Colors: []
 --- !u!1 &111881174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,81 +1316,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 221223065}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &239760969
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Hidden/RetroCameraEffect
-  m_Shader: {fileID: 4800000, guid: 2cfdcae76c757405786f1219a383da6e, type: 3}
-  m_ShaderKeywords: BOTTOM_STRETCH_ON CHROMATIC_ON DISPLACEMENT_ON NOISE_BOTTOM_ON
-    NOISE_ON RADIAL_DISTORTION_ON SCANLINES_ON VIGNETTE_ON
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _SecondaryTex
-      second:
-        m_Texture: {fileID: 2800000, guid: 0ecedd370a77a4a3dbbb9cc9e09081cd, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: _ChromaticAberration
-      second: 1.6
-    - first:
-        name: _DisplacementAmplitude
-      second: 0.00035
-    - first:
-        name: _DisplacementFrequency
-      second: 19.5
-    - first:
-        name: _DisplacementSpeed
-      second: 0.2
-    - first:
-        name: _NoiseBottomHeight
-      second: 0.038
-    - first:
-        name: _NoiseBottomIntensity
-      second: 1.067
-    - first:
-        name: _OffsetNoiseX
-      second: 0.26162952
-    - first:
-        name: _OffsetNoiseY
-      second: -0.02523417
-    - first:
-        name: _OffsetPosY
-      second: 0.000000117841495
-    - first:
-        name: _StaticIntensity
-      second: 0.956
-    - first:
-        name: _UseChromaticAberration
-      second: 1
-    - first:
-        name: _UseDisplacement
-      second: 1
-    - first:
-        name: _UseStaticNoise
-      second: 1
-    - first:
-        name: _UseVignette
-      second: 0
-    - first:
-        name: _Vignette
-      second: 0.1
-    m_Colors: []
 --- !u!1 &255071618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3209,7 +3209,7 @@ Prefab:
     - target: {fileID: 224009868613723660, guid: 4a6fdde83a540d74e9143801e5660f8c,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 667
+      value: 568
       objectReference: {fileID: 0}
     - target: {fileID: 224009868613723660, guid: 4a6fdde83a540d74e9143801e5660f8c,
         type: 2}
@@ -3239,7 +3239,7 @@ Prefab:
     - target: {fileID: 224218707366920330, guid: 4a6fdde83a540d74e9143801e5660f8c,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 388.8333
+      value: 322.8333
       objectReference: {fileID: 0}
     - target: {fileID: 224218707366920330, guid: 4a6fdde83a540d74e9143801e5660f8c,
         type: 2}
@@ -3259,7 +3259,7 @@ Prefab:
     - target: {fileID: 224623561069729794, guid: 4a6fdde83a540d74e9143801e5660f8c,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 846.8333
+      value: 714.8333
       objectReference: {fileID: 0}
     - target: {fileID: 224623561069729794, guid: 4a6fdde83a540d74e9143801e5660f8c,
         type: 2}
@@ -3269,7 +3269,7 @@ Prefab:
     - target: {fileID: 224623561069729794, guid: 4a6fdde83a540d74e9143801e5660f8c,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 418
+      value: 352
       objectReference: {fileID: 0}
     - target: {fileID: 224623561069729794, guid: 4a6fdde83a540d74e9143801e5660f8c,
         type: 2}
@@ -3289,7 +3289,7 @@ Prefab:
     - target: {fileID: 224992254962355134, guid: 4a6fdde83a540d74e9143801e5660f8c,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1294
+      value: 1096
       objectReference: {fileID: 0}
     - target: {fileID: 224992254962355134, guid: 4a6fdde83a540d74e9143801e5660f8c,
         type: 2}
@@ -3299,7 +3299,7 @@ Prefab:
     - target: {fileID: 224992254962355134, guid: 4a6fdde83a540d74e9143801e5660f8c,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 447.16666
+      value: 381.16666
       objectReference: {fileID: 0}
     - target: {fileID: 224992254962355134, guid: 4a6fdde83a540d74e9143801e5660f8c,
         type: 2}
@@ -3415,12 +3415,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 611547470}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &617302995 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114908787142304120, guid: 4a6fdde83a540d74e9143801e5660f8c,
-    type: 2}
-  m_PrefabInternal: {fileID: 598128304}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &618287323 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4679331945152330, guid: 1b3472a28782dbc499d9b1b726d594b9,
@@ -5099,7 +5093,7 @@ MonoBehaviour:
   useScanlines: 1
   scanlineSize: 80
   scanlineIntensity: 0.188
-  _material: {fileID: 239760969}
+  _material: {fileID: 103644429}
 --- !u!82 &909203541
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5193,7 +5187,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   zoomspeed: 5
-  border: 30
   maxX: -15
   minX: -25
   maxZ: -3
@@ -7128,7 +7121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunTurret_1: {fileID: 1558910609972998, guid: 448af6ff0c65f479ab98baaad085fe49,
     type: 2}
-  gunTurret_1b: {fileID: 105128, guid: 66d954f36feac4c9a8172b8803474bfd, type: 2}
   turretUI: {fileID: 918707943}
 --- !u!114 &1260511944
 MonoBehaviour:
@@ -7142,7 +7134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c97f98b4d7f0c4b408e2d18e4a3ba1d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 5
+  health: 0
   damagePerEnemy: 1
 --- !u!114 &1260511945
 MonoBehaviour:
@@ -7157,7 +7149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 500
-  moneyText: {fileID: 2027145323}
 --- !u!114 &1260511946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7170,16 +7161,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d7a5797e34acc24ebf9a8a850afb636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: 
-  spawnPoint: {fileID: 1178259498}
   enemyManager: {fileID: 2133807401}
   money: {fileID: 0}
-  playerHealth: {fileID: 0}
-  waypoints: {fileID: 332495475}
-  playerScore: {fileID: 0}
-  healthDisplay: {fileID: 1626784489}
-  moneyDisplay: {fileID: 2027145323}
-  killCountText: {fileID: 617302995}
+  health: {fileID: 0}
+  score: {fileID: 0}
+  UI: {fileID: 0}
+  spawn: {fileID: 0}
+  playerInterface: {fileID: 0}
+  state: {fileID: 0}
+  constructionManager: {fileID: 0}
+  cameraController: {fileID: 0}
 --- !u!4 &1260511947
 Transform:
   m_ObjectHideFlags: 0
@@ -7209,6 +7200,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopped: 0
+  spawnPoint: {fileID: 0}
+  enemyManager: {fileID: 0}
+  wayPoints: {fileID: 0}
 --- !u!114 &1260511949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8943,12 +8937,6 @@ Transform:
   m_Father: {fileID: 332495476}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &1626784489 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114221355699098844, guid: 4a6fdde83a540d74e9143801e5660f8c,
-    type: 2}
-  m_PrefabInternal: {fileID: 598128304}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1647914220
 Prefab:
   m_ObjectHideFlags: 0
@@ -9215,8 +9203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b9dc7b00962c445a4aa50035ef7c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 1260511942}
-  spawnMotor: {fileID: 0}
 --- !u!1 &1713260569
 GameObject:
   m_ObjectHideFlags: 0
@@ -10108,15 +10094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5f7baeab5aafc4384c58b01db6478f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Players: {fileID: 829881956}
-  TimeBetweenWaves: 1
-  Timer: 0
-  waveNumber: 0
-  waves:
-  - numberToSpawn: 50
-    enemyToSpawn: {fileID: 100116, guid: 9ed457231215345008eadc301d211e44, type: 2}
-    spawnRate: 1
-  stopped: 0
 --- !u!4 &1925927394
 Transform:
   m_ObjectHideFlags: 0
@@ -10353,12 +10330,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4679331945152330, guid: 1b3472a28782dbc499d9b1b726d594b9,
     type: 2}
   m_PrefabInternal: {fileID: 1224859115}
---- !u!114 &2027145323 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114977089199575874, guid: 4a6fdde83a540d74e9143801e5660f8c,
-    type: 2}
-  m_PrefabInternal: {fileID: 598128304}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &2051482671
 GameObject:
   m_ObjectHideFlags: 0
