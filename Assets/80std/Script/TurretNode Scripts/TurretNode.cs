@@ -26,11 +26,7 @@ public class TurretNode : MonoBehaviour {
 
 	public void StartBuild() {
 		buildingManager.SelectTurretNode (this);
-	}
-
-	public void ModifyChild(){
-		buildingManager.SetTurretToModify (GetTurret());
-		StartBuild ();
+		buildingManager.SetBuildingStatus (true);
 	}
 
 	public GameObject GetTurret() {

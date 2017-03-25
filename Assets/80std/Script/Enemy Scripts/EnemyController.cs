@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour {
 	private EnemyPrefabConfig config;
 	private EnemyModel model;
 	private EnemyView view;
+	private bool dead = false;
 
 	void Start () {
 		config = GetComponent<EnemyPrefabConfig> ();
@@ -19,8 +20,10 @@ public class EnemyController : MonoBehaviour {
 
 	public void Damage(int damage)
 	{
+		if (dead) return;
 		model.TakeDamage (damage);
 		if (model.IsDead ()) {
+			dead = true;
 			view.DeathSequence ();
 		} else {
 			view.HitSequence();

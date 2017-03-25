@@ -34,6 +34,7 @@ public class EnemyView : MonoBehaviour {
 		if (sfx) {sfx.PlayDieAudio();}
 
 		owningPlayer.money.AddMoney(onKillMoney);
+		owningPlayer.score.AssignKill ();
 		movementController.StopObject ();
 		Destroy(gameObject, 3f);
 	}

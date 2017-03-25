@@ -25,7 +25,7 @@ public class TurretView : MonoBehaviour
 
 	void OnDrawGizmosSelected () {
 		Gizmos.color = Color.red;
-		Gizmos.DrawWireSphere (transform.position, self.range);
+		Gizmos.DrawWireSphere (self.transform.position, self.range);
 	}
 
 }

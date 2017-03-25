@@ -17,6 +17,7 @@ public class Shop : MonoBehaviour {
 
 	public void Select (int index)
 	{
+		visitor.SetBuildingStatus (true);
 		visitor.SetTurretToBuild(turrets[index]);
 	}
 

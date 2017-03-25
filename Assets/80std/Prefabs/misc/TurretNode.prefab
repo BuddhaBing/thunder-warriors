@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d4a7d9af05b040c5a6f91016306a9bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0, g: 0, b: 0, a: 0}
+  hoverColor: {r: 0.64705884, g: 0.080882356, b: 0.080882356, a: 0}
 --- !u!114 &114712812262746730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,5 +118,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}

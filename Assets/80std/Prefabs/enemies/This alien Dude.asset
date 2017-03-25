@@ -15,11 +15,11 @@ MonoBehaviour:
   speed: 4
   rotationSpeed: 10
   onKillMoney: 20
-  maxHealth: 100
-  getHitClip: {fileID: 8300000, guid: 21c9f0d7545c54f90a40efa25b2fc308, type: 3}
+  maxHealth: 150
+  getHitClip: {fileID: 8300000, guid: cd82f174c675d4ec4801bb228b5ed3b3, type: 3}
   getHitVolume: 1
-  dieClip: {fileID: 8300000, guid: c987d81781d794a97bb468abcbb7414e, type: 3}
+  dieClip: {fileID: 8300000, guid: 654b4bd46d7054b9ba518837ce3c1800, type: 3}
   dieVolume: 1
-  breachClip: {fileID: 0}
+  breachClip: {fileID: 8300000, guid: 4a60f7f46793e4b18aa8a336ca77a74e, type: 3}
   breachVolume: 1
   prefab: {fileID: 1706955013917326, guid: 3b35b100b8aaebe49b22d3e455191b05, type: 2}

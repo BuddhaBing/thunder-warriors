@@ -14,11 +14,11 @@ public class TurretModel : MonoBehaviour
 		fireRate = self.fireRate;
 	}
 
-	public void SetOwner(GameObject player) {
+	public void SetOwner(PlayerConfig player) {
 		self.owner = player;
 	}
 
-	public GameObject Owner() {
+	public PlayerConfig Owner() {
 		return self.owner;
 	}
 

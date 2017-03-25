@@ -30,7 +30,7 @@ public class BuildingWorker : MonoBehaviour
 		instance.GetComponent<TurretConfig> ().enemies = enemyManager;
 		instance.transform.SetParent (node.gameObject.transform);
 		node.SetOccupied(true);
-		manager.nodeToBuildOn = null;
+		manager.SetTurretToModify (instance);
 	}
 
 	public void SellTurret (TurretNode node, GameObject turret) { // Model or Turret Construction? 

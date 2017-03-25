@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour {
 
-	private bool winner = false;
-
 	private PlayerHealth playerHealth;
 	private PlayerSpawn playerSpawn;
 	private PlayerUI playerUI;
@@ -22,19 +20,18 @@ public class PlayerState : MonoBehaviour {
 		playerEnemies = playerConfig.enemyManager;
 	}
 
+	void Update() {
+		CheckWon ();
+		CheckLost ();
+	}
+
     public void TakeDamage()
     {
         playerHealth.TakeDamage();
-        UpDateStatus();
     }
 
 	public int GetState(){
 		return winState;
-	}
-
-	public void UpDateStatus(){
-		CheckWon ();
-		CheckLost ();
 	}
 		
 	void CheckWon(){

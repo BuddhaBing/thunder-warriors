@@ -37,9 +37,9 @@ public class PlayerInterface : MonoBehaviour {
 	}
 
 	private void TurretBuildSection(){
-		if(Input.GetMouseButtonDown(0) && !(Input.GetKey("left shift") || Input.GetKey("right shift")))
-			buildingManager.SetTurretToBuild (null);
-		if(Input.GetKeyUp ("left shift") || Input.GetKeyUp ("right shift"))
-			buildingManager.SetTurretToBuild (null);	
+//		if(Input.GetMouseButtonDown(0) && !(Input.GetKey("left shift") || Input.GetKey("right shift")))
+//			buildingManager.SetTurretToBuild (null);
+//		if(Input.GetKeyUp ("left shift") || Input.GetKeyUp ("right shift"))
+//			buildingManager.SetTurretToBuild (null);	
 	}
 }

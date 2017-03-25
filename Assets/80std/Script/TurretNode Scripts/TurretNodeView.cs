@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TurretNodeView : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public class TurretNodeView : MonoBehaviour {
 	private Color startColor;
 
 	private Coroutine pulser;
-	private bool pulsing;
+	private bool pulsing = false;
 	private float pulseDuration = 0.5f;
 	private float smoothness = 0.02f;
 
@@ -26,14 +27,16 @@ public class TurretNodeView : MonoBehaviour {
 	}
 
 	void Update() {
-		if(!pulsing) { pulser = StartCoroutine(PulseColor()); }
-		if (buildingManager.nodeToBuildOn != self) { StopPulsing (); } 
+		if (pulsing && buildingManager.nodeToBuildOn != self) { 
+			StopPulsing ();
+		} else if (!pulsing && buildingManager.nodeToBuildOn == self) { 
+			pulser = StartCoroutine(PulseColor());
+		}
 	}
 
 	void OnMouseEnter()
 	{
-		Debug.Log ("hui");
-		if (buildingManager.GetTurretToBuild() == null) {return;}
+		if (IsOverGameObject()) return;
 		rend.material.color = hoverColor;
 	}
 
@@ -44,9 +47,8 @@ public class TurretNodeView : MonoBehaviour {
 
 	void OnMouseDown()
 	{
+		if (IsOverGameObject()) return;
 		self.StartBuild ();
-		if (!self.IsBuildable())
-			self.ModifyChild ();
 	}
 
 	IEnumerator PulseColor()
@@ -67,6 +69,10 @@ public class TurretNodeView : MonoBehaviour {
 		StopCoroutine (pulser);
 		rend.material.color = startColor;
 		pulsing = false;
+	}
+
+	bool IsOverGameObject() {
+		return EventSystem.current.IsPointerOverGameObject ();
 	}
 
 }

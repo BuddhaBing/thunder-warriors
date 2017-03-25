@@ -122,13 +122,13 @@ GameObject:
   - component: {fileID: 114283995920453400}
   - component: {fileID: 114847297833840266}
   - component: {fileID: 114019681134643186}
-  - component: {fileID: 114758336785969062}
   - component: {fileID: 114253226820074000}
   - component: {fileID: 114422242435496462}
   - component: {fileID: 114032082923501848}
   - component: {fileID: 114360467386240368}
   - component: {fileID: 114604116209700582}
   - component: {fileID: 114635765768104666}
+  - component: {fileID: 114920164529815208}
   - component: {fileID: 114289489781431714}
   m_Layer: 0
   m_Name: Player 1
@@ -6532,7 +6532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114008038938911492
 MonoBehaviour:
@@ -6583,7 +6583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114032082923501848
 MonoBehaviour:
@@ -6598,6 +6598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthDisplay: {fileID: 0}
   moneyDisplay: {fileID: 0}
+  levelOverUI: {fileID: 0}
   killCountText: {fileID: 0}
   winText: {fileID: 0}
   winString: Level Complete
@@ -6638,7 +6639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114062819353751364
 MonoBehaviour:
@@ -6652,7 +6653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114063933155181032
 MonoBehaviour:
@@ -6678,7 +6679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114088652554376490
 MonoBehaviour:
@@ -6716,7 +6717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114102678020683562
 MonoBehaviour:
@@ -6754,7 +6755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114124581887334824
 MonoBehaviour:
@@ -6768,7 +6769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114129975316877406
 MonoBehaviour:
@@ -6794,7 +6795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114136231686673738
 MonoBehaviour:
@@ -6808,7 +6809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114137119900180394
 MonoBehaviour:
@@ -6834,7 +6835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114145352300322694
 MonoBehaviour:
@@ -6884,7 +6885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114164693882840572
 MonoBehaviour:
@@ -6910,7 +6911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114172349366403644
 MonoBehaviour:
@@ -6924,7 +6925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114185973870741882
 MonoBehaviour:
@@ -6950,7 +6951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114194209496881448
 MonoBehaviour:
@@ -7012,7 +7013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114233540683190332
 MonoBehaviour:
@@ -7038,7 +7039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114246329308215640
 MonoBehaviour:
@@ -7079,7 +7080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114258463068271380
 MonoBehaviour:
@@ -7105,7 +7106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114263218047446222
 MonoBehaviour:
@@ -7130,7 +7131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114279181168846916
 MonoBehaviour:
@@ -7144,7 +7145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114283472308112234
 MonoBehaviour:
@@ -7158,7 +7159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114283522480787184
 MonoBehaviour:
@@ -7191,7 +7192,7 @@ MonoBehaviour:
   spawn: {fileID: 114253226820074000}
   playerInterface: {fileID: 114604116209700582}
   state: {fileID: 114635765768104666}
-  constructionManager: {fileID: 114758336785969062}
+  buildingManager: {fileID: 114920164529815208}
   cameraController: {fileID: 0}
 --- !u!114 &114284077994238412
 MonoBehaviour:
@@ -7205,7 +7206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114285619336082608
 MonoBehaviour:
@@ -7219,7 +7220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114289489781431714
 MonoBehaviour:
@@ -7244,7 +7245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114301222928769532
 MonoBehaviour:
@@ -7258,7 +7259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114311547039948434
 MonoBehaviour:
@@ -7284,7 +7285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114334648684652620
 MonoBehaviour:
@@ -7298,7 +7299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114340374127402056
 MonoBehaviour:
@@ -7312,7 +7313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114352109965990812
 MonoBehaviour:
@@ -7373,7 +7374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114391302169704028
 MonoBehaviour:
@@ -7410,7 +7411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d4a7d9af05b040c5a6f91016306a9bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0, g: 0, b: 0, a: 0}
+  hoverColor: {r: 0.77205884, g: 0.102184266, b: 0.102184266, a: 0}
 --- !u!114 &114406608373158014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7423,7 +7424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114410807967936800
 MonoBehaviour:
@@ -7449,7 +7450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114414799283043298
 MonoBehaviour:
@@ -7498,7 +7499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114447195252679288
 MonoBehaviour:
@@ -7512,7 +7513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114465657170135522
 MonoBehaviour:
@@ -7550,7 +7551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114478640786259494
 MonoBehaviour:
@@ -7564,7 +7565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114479860267133924
 MonoBehaviour:
@@ -7578,7 +7579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114482180432414108
 MonoBehaviour:
@@ -7592,7 +7593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114482697784225576
 MonoBehaviour:
@@ -7618,7 +7619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114492546307484922
 MonoBehaviour:
@@ -7632,7 +7633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114493113938113170
 MonoBehaviour:
@@ -7646,7 +7647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114495590696795866
 MonoBehaviour:
@@ -7660,7 +7661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114500403957507100
 MonoBehaviour:
@@ -7674,7 +7675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114516160178150804
 MonoBehaviour:
@@ -7688,7 +7689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114520385803662806
 MonoBehaviour:
@@ -7714,7 +7715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114527430950980434
 MonoBehaviour:
@@ -7740,7 +7741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114542492209889704
 MonoBehaviour:
@@ -7754,7 +7755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114544525709237184
 MonoBehaviour:
@@ -7840,7 +7841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114582262289098528
 MonoBehaviour:
@@ -7854,7 +7855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114604116209700582
 MonoBehaviour:
@@ -7892,7 +7893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114621851721654356
 MonoBehaviour:
@@ -7929,7 +7930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114649853038841312
 MonoBehaviour:
@@ -7943,7 +7944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114656335847498810
 MonoBehaviour:
@@ -8041,7 +8042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114717148504399644
 MonoBehaviour:
@@ -8114,7 +8115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114750991320505160
 MonoBehaviour:
@@ -8140,19 +8141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
---- !u!114 &114758336785969062
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1044049461999294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d367287ee2fc334ebfeb4afcbc5b9bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeToBuildOn: {fileID: 0}
-  turretUI: {fileID: 0}
 --- !u!114 &114763685971921504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8165,7 +8153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114764140459183958
 MonoBehaviour:
@@ -8203,7 +8191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114783025653194118
 MonoBehaviour:
@@ -8217,7 +8205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114791711991733110
 MonoBehaviour:
@@ -8243,7 +8231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114808423048386380
 MonoBehaviour:
@@ -8269,7 +8257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114823936299945786
 MonoBehaviour:
@@ -8307,7 +8295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114829984656273138
 MonoBehaviour:
@@ -8333,7 +8321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114844951883975626
 MonoBehaviour:
@@ -8371,7 +8359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114860726126464030
 MonoBehaviour:
@@ -8385,7 +8373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114871856794105840
 MonoBehaviour:
@@ -8411,7 +8399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114911747469154566
 MonoBehaviour:
@@ -8425,7 +8413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114913677466726494
 MonoBehaviour:
@@ -8439,7 +8427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114916627536249718
 MonoBehaviour:
@@ -8453,8 +8441,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
+--- !u!114 &114920164529815208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1044049461999294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d367287ee2fc334ebfeb4afcbc5b9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeToBuildOn: {fileID: 0}
+  turretUI: {fileID: 0}
 --- !u!114 &114924459364501008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8491,7 +8492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114948615396148920
 MonoBehaviour:
@@ -8517,7 +8518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114963565586241926
 MonoBehaviour:
@@ -8555,7 +8556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114989488776005386
 MonoBehaviour:
@@ -8569,7 +8570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 1044049461999294}
-  constructionManager: {fileID: 0}
+  buildingManager: {fileID: 0}
   positionOffset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &114990989844525124
 MonoBehaviour:

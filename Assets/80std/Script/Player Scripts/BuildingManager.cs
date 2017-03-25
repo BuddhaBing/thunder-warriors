@@ -8,6 +8,7 @@ public class BuildingManager : MonoBehaviour {
 
 	public static BuildingManager instance;
 	private BuildingWorker worker;
+	private bool building;
 
 	public TurretNode nodeToBuildOn;
 
@@ -26,6 +27,7 @@ public class BuildingManager : MonoBehaviour {
 	}
 
 	void Update() {
+		if (!building) return;
 		if ( CanBuildTurret () ) { 
 			StartBuild ();
 		}
@@ -33,21 +35,17 @@ public class BuildingManager : MonoBehaviour {
 	}
 
 	void TryShowUI(){
-		if (turretToModify) {
-			turretUI.ToggleUI (true);
-		} else {
+		if (!nodeToBuildOn || (nodeToBuildOn && nodeToBuildOn.transform.childCount == 0)) { 
 			turretUI.ToggleUI (false);
+		}
+		else { 
+			turretUI.ToggleUI (true);
 		}
 	}
 
 	public GameObject GetTurretToBuild()
 	{
 		return turretToBuild;
-	}
-
-	public GameObject GetTurretToModify()
-	{
-		return turretToModify;
 	}
 
 	public void SetTurretToBuild(GameObject turret)
@@ -73,6 +71,7 @@ public class BuildingManager : MonoBehaviour {
 	}
 
 	bool CanUpgradeTurret() {
+		turretToModify = nodeToBuildOn.GetTurret ();
 		if (!turretToModify.GetComponent<TurretConfig>().upgradePrefab) {return false;}
 		return true;
 	}
@@ -80,6 +79,16 @@ public class BuildingManager : MonoBehaviour {
 	void StartBuild() {
 		playerMoney.TakeMoneyTurret (turretToBuild);
 		worker.BuildTurret (nodeToBuildOn, turretToBuild);
+		FinaliseBuild ();
+	}
+
+	public void SetBuildingStatus(bool status) {
+		building = status;
+	}
+
+	void FinaliseBuild() {
+		SetBuildingStatus (false);
+		SetTurretToBuild (null);
 	}
 
 	public void StartUpgrade() {
@@ -88,11 +97,13 @@ public class BuildingManager : MonoBehaviour {
 			var cost = turretToModify.GetComponent<TurretConfig> ().costToUpgrade;
 			playerMoney.TakeMoney (cost);
 			worker.UpgradeTurret (nodeToBuildOn, upgrade);
+			FinaliseBuild ();
 		}
 	}
 
 	public void SellTurret(){
-		playerMoney.AddMoney (turretToModify.GetComponent<TurretConfig> ().sellPrice);
-		worker.SellTurret(nodeToBuildOn,turretToModify);
+		var turret = nodeToBuildOn.GetTurret ();
+		playerMoney.AddMoney (turret.GetComponent<TurretConfig> ().sellPrice);
+		worker.SellTurret(nodeToBuildOn, turret);
 	}
 }

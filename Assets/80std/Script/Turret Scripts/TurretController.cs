@@ -12,10 +12,11 @@ public class TurretController : MonoBehaviour {
 
 	void Start () {
 		self = GetComponent<TurretConfig>();
+		self.owner = transform.parent.parent.GetComponentInParent<PlayerConfig>();
 		model = self.model;
 		targeting = self.targeting;
 		view = self.view;
-		InvokeRepeating ("UpdateTarget", 0.5f, self.updateRate);
+		InvokeRepeating ("UpdateTarget", self.updateRate, self.updateRate);
 	}
 
 	void Update () {
@@ -41,6 +42,7 @@ public class TurretController : MonoBehaviour {
 			targeting.FindNearestEnemy (enemy, self.range);
 			targeting.SelectEnemy (self.range);
 		}
+		targeting.ResetDistance ();
 	}
 
 }

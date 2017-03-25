@@ -7,8 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Building
-  m_Shader: {fileID: 4800000, guid: 817eb535dd3fc45ae8672e288192b963, type: 3}
-  m_ShaderKeywords: _EMISSION
+  m_Shader: {fileID: 4800000, guid: ec8ba4708b4b24ea3874139453950356, type: 3}
+  m_ShaderKeywords: _EMISSION _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _SUNENABLED_ON
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -86,19 +86,34 @@ Material:
         name: _DetailNormalMapScale
       second: 1
     - first:
+        name: _DirectionPitch
+      second: 0
+    - first:
+        name: _DirectionYaw
+      second: 0
+    - first:
         name: _DstBlend
       second: 0
     - first:
         name: _EmissionGain
       second: 0.5
     - first:
-        name: _GlossMapScale
+        name: _Exponent
       second: 1
+    - first:
+        name: _Gain
+      second: 2
+    - first:
+        name: _GlossMapScale
+      second: 0
     - first:
         name: _Glossiness
       second: 0.5
     - first:
         name: _GlossyReflections
+      second: 1
+    - first:
+        name: _Intensity
       second: 1
     - first:
         name: _Metallic
@@ -114,7 +129,7 @@ Material:
       second: 0.02
     - first:
         name: _SmoothnessTextureChannel
-      second: 0
+      second: 1
     - first:
         name: _Specular
       second: 100
@@ -124,6 +139,33 @@ Material:
     - first:
         name: _SrcBlend
       second: 1
+    - first:
+        name: _StripesDistance
+      second: 0.01
+    - first:
+        name: _StripesExponent1
+      second: 4
+    - first:
+        name: _StripesHeight
+      second: 0.45
+    - first:
+        name: _StripesWidth
+      second: 0.01
+    - first:
+        name: _SunEnabled
+      second: 1
+    - first:
+        name: _SunExponent
+      second: 5
+    - first:
+        name: _SunPitch
+      second: 0
+    - first:
+        name: _SunSize
+      second: 0.01
+    - first:
+        name: _SunYaw
+      second: 0
     - first:
         name: _UVSec
       second: 0
@@ -136,10 +178,25 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _Color1
+      second: {r: 0, g: 0.7, b: 0.74, a: 0}
+    - first:
+        name: _Color2
+      second: {r: 0.97, g: 0.67, b: 0.51, a: 0}
+    - first:
+        name: _ColorSun1
+      second: {r: 0.97, g: 0.67, b: 0.51, a: 0}
+    - first:
+        name: _ColorSun2
+      second: {r: 0.97, g: 0.17, b: 0.21, a: 0}
+    - first:
+        name: _Direction
+      second: {r: 0, g: 1, b: 0, a: 0}
     - first:
         name: _EmissionColor
-      second: {r: 0.9338235, g: 0, b: 0, a: 1}
+      second: {r: 0.107251525, g: 0.33088237, b: 0, a: 1}
     - first:
         name: _LineColor
       second: {r: 0.1, g: 1, b: 0.1, a: 1}
@@ -149,3 +206,9 @@ Material:
     - first:
         name: _ShadowColor
       second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _SunDirection
+      second: {r: 0, g: 1, b: 0, a: 0}
+    - first:
+        name: _SunDirectionP
+      second: {r: 0, g: 0, b: 0, a: 0}

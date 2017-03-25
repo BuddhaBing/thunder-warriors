@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerUI : MonoBehaviour {
 	public Text healthDisplay;
 	public Text moneyDisplay;
+	public GameObject levelOverUI;
 	public Text killCountText;
 	public Text winText;
 
@@ -43,15 +45,26 @@ public class PlayerUI : MonoBehaviour {
 		killCountText.text = "Kills:" + killCount;
 	}
 
+	public void Quit() {
+		Application.LoadLevel ("main_menu");
+	}
+
+	public void NextLevel(int sceneIndex) {
+		SceneManager.LoadScene (sceneIndex);
+	}
+
 	void UpdateStateText(int WinEnumerator){
 		switch (WinEnumerator) {
 		case -1:
+			levelOverUI.SetActive (false);
 			winText.text = "";
 			break;
 		case 0:
+			levelOverUI.SetActive (true);
 			winText.text = winString;
 			break;
 		case 1:
+			levelOverUI.SetActive (true);
 			winText.text = lossString;
 			break;
 		default:

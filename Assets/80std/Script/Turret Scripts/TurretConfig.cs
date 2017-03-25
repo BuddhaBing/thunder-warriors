@@ -24,7 +24,7 @@ public class TurretConfig : MonoBehaviour
 	public Transform partToRotate;
 	public Transform[] firepoints;
 	public EnemyManager enemies;
-	public GameObject owner;
+	public PlayerConfig owner;
 
 	[Header("Model View Controller")]
 	public TurretModel model;
