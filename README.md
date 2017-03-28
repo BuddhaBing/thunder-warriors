@@ -117,7 +117,7 @@ Click on the link above to play a live, web browser based demo
 
 ## <a name="collaborators">Collaborators</a>
 
-[Rob Brentnall](https://github.com/treborb)
-[Ben Carson](https://github.com/BenJohnCarson)
-[Peter Grant-Hay](https://github.com/Putterhead)
-[James Turner](https://github.com/JamesTurnerGit)
+* [Rob Brentnall](https://github.com/treborb)
+* [Ben Carson](https://github.com/BenJohnCarson)
+* [Peter Grant-Hay](https://github.com/Putterhead)
+* [James Turner](https://github.com/JamesTurnerGit)
