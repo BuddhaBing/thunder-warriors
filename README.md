@@ -6,7 +6,7 @@
 
 ## Technologies
 * [Unity3D](https://unity3d.com/)
-* [C Sharp](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
+* [C#](https://en.wikipedia.org/wiki/C_Sharp_programming_language)
 * [NUnit](https://www.nunit.org/)
 
 ## Jump To
