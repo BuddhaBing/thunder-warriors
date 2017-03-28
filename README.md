@@ -6,7 +6,7 @@
 
 ## Technologies
 * [Unity3D](https://unity3d.com/)
-* [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
+* [C\#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
 * [NUnit](https://www.nunit.org/)
 
 ## Jump To
@@ -20,6 +20,8 @@
 ## The Project
 
 This is the [Makers Academy](http://www.makersacademy.com) final two-week group project. [We](#collaborators) decided to build a 3D [Tower Defence] video game using the [Unity3D](https://unity3d.com/) multi platform game development tool.
+
+After some discussion, we settled on an 80s theme for the game, and the name "Thunder Warriors" came from an 80s random name generator!
 
 [None of us](#collaborators) had ever created a video game, or coded in C# before, so it was a brand new challenge for all of us. We had two weeks to learn how to use the Unity platform, learn a new language, and to create a video game using this newly acquired knowledge.
 
