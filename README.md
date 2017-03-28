@@ -102,7 +102,7 @@ I want to be able to pan and zoom the camera.
 
 The game cannot be installed as such from this repo, as it relies on paid assets from the Unity Asset Store. This repo serves as an example of the code behind the game mechanics. The C# scripts driving the game can be found in the folder: /Assets/80std/Script/
 
-We have an associated [repo here](https://github.com/treborb/thunder-warriors), which contains instructions for installing the game so that it can be run locally and played in the browser.
+We have an associated [repo here](https://github.com/treborb/thunder-warriors-web), which contains instructions for installing the game so that it can be run locally and played in the browser.
 
 ## <a name="demo">[Heroku Demo](https://thunder-warriors.herokuapp.com)</a>
 Click on the link above to play a live, web browser based demo
