@@ -16,6 +16,7 @@
 * [Heroku Demo](#demo)
 * [Youtube Presentation Video](http://www.youtube.com/watch?v=nKK-ov95Q9E&t=18m25s)
 * [Screenshots](#screenshots)
+* [Collaborators](#collaborators)
 
 ## The Project
 
